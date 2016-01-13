@@ -1,3 +1,9 @@
 # 计算机系统结构重点
 
-This file serves as your book's preface, a great place to describe your book's content and ideas.
+这门课重点老师给的足够详细了。文档中有些知识点用不同的颜色区分出来了，这里也将他们分别区分。下面是以前的同学书上留下的考试题型以供参考。
+
+1. 选择20×1
+2. 填空10*1
+3. 判断10*2
+4. 简答4*5
+5. 综合3*10
