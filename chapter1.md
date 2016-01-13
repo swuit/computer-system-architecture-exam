@@ -33,9 +33,17 @@
 | -- | -- | -- |
 | 1位 | 第一位是阶符，一共是p位 | 尾数部分，一共是m位 |
 
-浮点数的值应当是r<SUB>m</SUB><SUP style="margin:0 0 0 -10px;">阶值</SUP>×尾数值，所以最大负数应当是r<SUB>m</SUB><SUP style="margin:0 0 0 -10px;">0</SUP>×r<SUB>m</SUB><SUP style="margin:0 0 0 -10px;">-1</SUP>=r<SUB>m</SUB><SUP style="margin:0 0 0 -10px;">-1</SUP>
+浮点数的值应当是**r<SUB>m</SUB><SUP style="margin:0 0 0 -10px;">阶值</SUP>×尾数值**，所以最大负数应当是**-r<SUB>m</SUB><SUP style="margin:0 0 0 -10px;">0</SUP>×r<SUB>m</SUB><SUP style="margin:0 0 0 -10px;">-1</SUP>=-r<SUB>m</SUB><SUP style="margin:0 0 0 -10px;">-1</SUP>**
 - 四种浮点数尾数下溢处理方法
-- 由浮点数表示的尾数的基，尾数长度，求可表示的规格化正尾数值的范围
+    - `截断法`。其方法是将尾数超出机器字长的部分截去。
+    - `舍入法`。其方法是在机器运算的规定字长之外增设一位附加位，存放溢出部分的最高位，每当进行尾数下溢处理时，将附加位加1。
+    - `恒置“1”法`。其方法是将机器运算的规定字长之最低位恒置为“1”。
+    - `查表舍入法`。
+- 由浮点数表示的尾数的基（r<SUB>m</SUB>），尾数长度(m)，求可表示的规格化正尾数值的范围
+    
+    最小值：**r<SUB>m</SUB><SUP style="margin:0 0 0 -10px;">-1</SUP>**
+    
+    最大值：**1-r<SUB>m</SUB><SUP style="margin:0 0 0 -8px;">-m</SUP>**
 - 数据存储空间寻址方式
 - 指令的操作码优化编码方法
 - 指令执行结果出现异常而引起的中断
